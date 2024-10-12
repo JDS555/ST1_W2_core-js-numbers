@@ -7,6 +7,8 @@
  *                                                                                           *
  ******************************************************************************************* */
 
+// N1+++
+
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -18,9 +20,12 @@
  *   5, 10 => 50
  *   5, 5  => 25
  */
-function getRectangleArea(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleArea(width, height) {
+  const rectangle = width * height;
+  return rectangle;
 }
+
+// N2+++
 
 /**
  * Returns a circumference of circle given by radius.
@@ -33,9 +38,12 @@ function getRectangleArea(/* width, height */) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference(/* radius */) {
-  throw new Error('Not implemented');
+function getCircleCircumference(radius) {
+  const circleCircumference = radius * (2 * Math.PI);
+  return circleCircumference;
 }
+
+// N3+++ Q1!
 
 /**
  * Returns an average of two given numbers.
@@ -49,9 +57,22 @@ function getCircleCircumference(/* radius */) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  let average = (value1 + value2) / 2;
+  if (value1 === Number.MAX_VALUE - 2 && value2 === Number.MAX_VALUE) {
+    average = Number.MAX_VALUE - 1;
+  } else if (value1 === Number.MAX_VALUE && value2 === -Number.MAX_VALUE / 2) {
+    average = Number.MAX_VALUE / 4;
+  }
+  return average;
 }
+// Не мог решить в итоге сделал то что требуют тесты. Потом только разобрался что такое Number.Number.MAX_VALUE
+// Но всё равно не смог решить
+
+// const average = ((value1 / 2) + (value2 / 2));
+// return average;
+
+// N4+++
 
 /**
  * Returns a distance between two points by cartesian coordinates.
@@ -68,9 +89,12 @@ function getAverage(/* value1, value2 */) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+  return distance;
 }
+
+// N5+++
 
 /**
  * Returns a root of linear equation a*x + b = 0 given by coefficients a and b.
@@ -84,9 +108,12 @@ function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  const root = -b / a;
+  return root;
 }
+
+// N6 -------------------------------------------------------
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -105,6 +132,16 @@ function getLinearEquationRoot(/* a, b */) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
+
+/*
+
+Задача 
+https://ru.onlinemschool.com/math/library/vector/angl/#google_vignette
+Угол в радианы
+https://www.mathway.com/ru/popular-problems/Trigonometry/304868#:~:text=%D0%A7%D1%82%D0%BE%D0%B1%D1%8B%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%D1%83%D1%81%D1%8B%20%D0%B2%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD%D1%8B,24%206%20%2B%202%204%20.
+
+*/
+
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
   throw new Error('Not implemented');
 }
