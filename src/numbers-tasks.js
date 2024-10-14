@@ -43,7 +43,7 @@ function getCircleCircumference(radius) {
   return circleCircumference;
 }
 
-// N3+++ Q1!
+// N3+++
 
 /**
  * Returns an average of two given numbers.
@@ -57,20 +57,13 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
+
+// Придумал как решить :)
+
 function getAverage(value1, value2) {
-  let average = (value1 + value2) / 2;
-  if (value1 === Number.MAX_VALUE - 2 && value2 === Number.MAX_VALUE) {
-    average = Number.MAX_VALUE - 1;
-  } else if (value1 === Number.MAX_VALUE && value2 === -Number.MAX_VALUE / 2) {
-    average = Number.MAX_VALUE / 4;
-  }
+  const average = (value1 / 4 + value2 / 4) * 2;
   return average;
 }
-// Не мог решить в итоге сделал то что требуют тесты. Потом только разобрался что такое Number.Number.MAX_VALUE
-// Но всё равно не смог решить
-
-// const average = ((value1 / 2) + (value2 / 2));
-// return average;
 
 // N4+++
 
@@ -146,6 +139,8 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
   throw new Error('Not implemented');
 }
 
+// N7 ???
+
 /**
  * Returns a last digit of a integer number.
  * The input parameter will always be greater than or equal to zero and will be in decimal notation.
@@ -159,8 +154,10 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  const valueToString = toString(value);
+  const lastDigit = valueToString[valueToString.length - 1];
+  return lastDigit;
 }
 
 /**
