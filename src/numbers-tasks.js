@@ -465,9 +465,15 @@ function toExponential(number, fractionDigits) {
  * 12345, 2    => '12345.00'
  * 12.345, 1   => '12.3'
  */
-function toFixed(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+// function toFixed(/* number, fractionDigits */) {
+//   throw new Error('Not implemented');
+// }
+
+function toFixed(number, fractionDigits) {
+  return number.toFixed(fractionDigits);
 }
+
+// N22---
 
 /**
  * Returns a string representation of a number in normal (fixed-point or exponential)
