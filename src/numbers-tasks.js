@@ -106,7 +106,7 @@ function getLinearEquationRoot(a, b) {
   return root;
 }
 
-// N6--- ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N6--- Q1 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -145,7 +145,7 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
   throw new Error('Not implemented');
 }
 
-// N7+++
+// N7+++ Q2
 
 /**
  * Returns a last digit of a integer number.
@@ -214,7 +214,7 @@ function getParallelepipedDiagonal(a, b, c) {
   return parallelepipedDiagonal;
 }
 
-// N10--- ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N10--- Q3 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns the number rounded to specified power of 10.
@@ -245,7 +245,7 @@ function roundToPowerOfTen(/* num, pow */) {
   throw new Error('Not implemented');
 }
 
-// N11---ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N11--- Q4 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns true is the number is prime; otherwise false.
@@ -279,7 +279,7 @@ function isPrime(/* n */) {
   throw new Error('Not implemented');
 }
 
-// N12 
+// N12---
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -296,14 +296,11 @@ function isPrime(/* n */) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(value, def) {
-  let number;
-  if (parseInt(value) === NaN) {
-    number = def;
-  } else {
-    number = parseInt(value);
-  }
+function toNumber(/* value, def */) {
+  throw new Error('Not implemented');
 }
+
+// N13+++
 
 /**
  * Returns the cube of the given number.
@@ -316,9 +313,15 @@ function toNumber(value, def) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+// function getCube(/* num */) {
+//   throw new Error('Not implemented');
+// }
+
+function getCube(num) {
+  return num ** 3;
 }
+
+// N14---
 
 /**
  * Returns the Fibonacci number located at the index position.
@@ -337,6 +340,8 @@ function getFibonacciNumber(/* index */) {
   throw new Error('Not implemented');
 }
 
+// N15
+
 /**
  * Returns the sum of all numbers from 1 to n.
  *
@@ -351,6 +356,8 @@ function getFibonacciNumber(/* index */) {
 function getSumToN(/* n */) {
   throw new Error('Not implemented');
 }
+
+// N16---
 
 /**
  * Returns the sum of the digits of a given number.
@@ -367,6 +374,8 @@ function getSumOfDigits(/* num */) {
   throw new Error('Not implemented');
 }
 
+// N17---
+
 /**
  * Returns true if the given number is a power of two, false otherwise.
  *
@@ -382,6 +391,8 @@ function isPowerOfTwo(/* num */) {
   throw new Error('Not implemented');
 }
 
+// N18+++
+
 /**
  * Returns the sine of a number.
  *
@@ -392,8 +403,12 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+// function getSine(/* num */) {
+//   throw new Error('Not implemented');
+// }
+
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
