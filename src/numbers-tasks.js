@@ -106,7 +106,7 @@ function getLinearEquationRoot(a, b) {
   return root;
 }
 
-// N6 -------------------------------------------------------
+// N6--- ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -136,10 +136,16 @@ https://www.mathway.com/ru/popular-problems/Trigonometry/304868#:~:text=%D0%A7%D
 */
 
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
+  //   const scalarProductOfVectors = x1 * x2 + y1 * y2;
+  //   const modulePointOne = Math.sqrt(x1 ** 2) + (y1 ** 2);
+  //   const modulePointTwo = Math.sqrt(x2 ** 2) + (y2 ** 2);
+  //   const angleBetweenVectors = scalarProductOfVectors / (modulePointOne * modulePointTwo);
+  //   const angleBetweenVectorsInRadians = angleBetweenVectors * (Math.PI / 180);
+  //   return angleBetweenVectorsInRadians;
   throw new Error('Not implemented');
 }
 
-// N7 ???
+// N7+++
 
 /**
  * Returns a last digit of a integer number.
@@ -154,11 +160,23 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
+
 function getLastDigit(value) {
-  const valueToString = toString(value);
-  const lastDigit = valueToString[valueToString.length - 1];
+  const valueToString = String(value);
+  const lastDigit = Math.abs(valueToString.slice(-1));
   return lastDigit;
 }
+
+// При решении выше работает но ругаеться на неоптимальность решения
+// И требует другой метод использовать
+// Это решение он тоже не принимает как оптимальное
+
+// function getLastDigit(value) {
+//   const lastDigit = Math.abs(value) % 10;
+//   return lastDigit;
+// }
+
+// N8
 
 /**
  * Returns a number by given string representation.
