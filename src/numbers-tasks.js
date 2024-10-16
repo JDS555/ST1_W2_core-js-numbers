@@ -298,6 +298,11 @@ function isPrime(/* n */) {
  */
 function toNumber(value, def) {
   let number;
+  if (parseInt(value) === NaN) {
+    number = def;
+  } else {
+    number = parseInt(value);
+  }
 }
 
 /**
