@@ -214,7 +214,7 @@ function getParallelepipedDiagonal(a, b, c) {
   return parallelepipedDiagonal;
 }
 
-// N10
+// N10--- ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns the number rounded to specified power of 10.
@@ -233,9 +233,19 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
+
+// Пока что не получаеться скипну эту задачу
+
+// function roundToPowerOfTen(num, pow) {
+//   const roundToPowerOf = Math.round(num / (10 ** pow)) * (10 ** pow);
+//   return roundToPowerOf;
+// }
+
 function roundToPowerOfTen(/* num, pow */) {
   throw new Error('Not implemented');
 }
+
+// N11---ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
 /**
  * Returns true is the number is prime; otherwise false.
@@ -254,9 +264,22 @@ function roundToPowerOfTen(/* num, pow */) {
  *   16 => false
  *   17 => true
  */
+// function isPrime(n) {
+//   let returnIsPrime;
+//   if (n === 2 || n === 3  n % 1 === 0 && n % 2 === 0 && n % 3 === 0 && n % n === 0) {
+//     returnIsPrime = true;
+//   } else {
+//     returnIsPrime = false;
+//   }
+
+//   return returnIsPrime;
+// }
+
 function isPrime(/* n */) {
   throw new Error('Not implemented');
 }
+
+// N12 
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -273,8 +296,8 @@ function isPrime(/* n */) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  let number;
 }
 
 /**
