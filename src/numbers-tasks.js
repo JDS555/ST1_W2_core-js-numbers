@@ -452,7 +452,7 @@ function toExponential(number, fractionDigits) {
   return number.toExponential(fractionDigits);
 }
 
-// N21
+// N21+++
 
 /**
  * Returns a string representation of a number in fixed-point notation.
@@ -491,6 +491,8 @@ function toPrecision(/* number, precision */) {
   throw new Error('Not implemented');
 }
 
+// N23+++
+
 /**
  * Returns the primitive value of a Number object.
  *
@@ -501,9 +503,15 @@ function toPrecision(/* number, precision */) {
  * new Number(5) => 5
  * Number(-5)    => -5
  */
-function getNumberValue(/* number */) {
-  throw new Error('Not implemented');
+// function getNumberValue(/* number */) {
+//   throw new Error('Not implemented');
+// }
+
+function getNumberValue(number) {
+  return number.valueOf();
 }
+
+// N24--- Q5
 
 /**
  * Returns a boolean value indicating whether the parameter is a number or not.
@@ -524,6 +532,18 @@ function isNumber(/* number */) {
   throw new Error('Not implemented');
 }
 
+// function isNumber(value) {
+//   let isNumberValue;
+//   if (typeof value === 'number' && !Number.isNaN(value) && !Number.isFinite(value)) {
+//     isNumberValue = true;
+//   } else {
+//     isNumberValue = false;
+//   }
+//   return isNumberValue;
+// }
+
+// N25+++
+
 /**
  * Returns a boolean value indicating whether a number is an integer or not.
  *
@@ -535,9 +555,12 @@ function isNumber(/* number */) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(/* number */) {
-  throw new Error('Not implemented');
+
+function isInteger(number) {
+  return Number.isInteger(number);
 }
+
+// N26
 
 /**
  * Returns a floating point number or, if the number cannot be parsed from the argument, returns NaN.
@@ -553,6 +576,8 @@ function getFloatOnString(/* str */) {
   throw new Error('Not implemented');
 }
 
+// N27
+
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
  * from the argument, returns NaN.
@@ -567,9 +592,15 @@ function getFloatOnString(/* str */) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
+// function getIntegerOnString(/* str, base */) {
+//   throw new Error('Not implemented');
+// }
+
 function getIntegerOnString(/* str, base */) {
   throw new Error('Not implemented');
 }
+
+// N28
 
 /**
  * Returns whether a number is a safe integer.
@@ -586,6 +617,8 @@ function isSafeInteger(/* number */) {
   throw new Error('Not implemented');
 }
 
+// N29
+
 /**
  * Returns the smallest integer less than or equal to a given number.
  *
@@ -600,6 +633,8 @@ function roundToSmallestInteger(/* number */) {
   throw new Error('Not implemented');
 }
 
+// N30
+
 /**
  * Returns the largest integer greater than or equal to a given number.
  *
@@ -613,6 +648,8 @@ function roundToSmallestInteger(/* number */) {
 function roundToLargestInteger(/* number */) {
   throw new Error('Not implemented');
 }
+
+// N31
 
 /**
  * Returns the value of a number rounded to the nearest integer.
@@ -629,6 +666,8 @@ function roundToNearestInteger(/* number */) {
   throw new Error('Not implemented');
 }
 
+// N32
+
 /**
  * Returns the integer part of a number by removing any fractional digits.
  *
@@ -643,6 +682,8 @@ function roundToNearestInteger(/* number */) {
 function getIntegerPartNumber(/* number */) {
   throw new Error('Not implemented');
 }
+
+// N33
 
 /**
  * Returns the sum of numbers.
@@ -660,6 +701,8 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
 
+// N34
+
 /**
  * Returns the largest number.
  *
@@ -675,6 +718,8 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
 function getMaxNumber(/* firstNumber, secondNumber */) {
   throw new Error('Not implemented');
 }
+
+// N35
 
 /**
  * Returns a random integer in the range from min to max.
@@ -692,6 +737,8 @@ function getRandomInteger(/* min, max */) {
   throw new Error('Not implemented');
 }
 
+// N36---
+
 /**
  * Returns the length of the hypotenuse of a right triangle.
  *
@@ -702,9 +749,15 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+// function getHypotenuse(/* a, b */) {
+//   throw new Error('Not implemented');
+// }
+
+function getHypotenuse(a, b) {
+  return Math.sqrt(a * a + b * b);
 }
+
+// N37
 
 /**
  * Returns count of odd numbers from zero to the resulting number.
