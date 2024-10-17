@@ -737,7 +737,7 @@ function getRandomInteger(/* min, max */) {
   throw new Error('Not implemented');
 }
 
-// N36---
+// N36+++
 
 /**
  * Returns the length of the hypotenuse of a right triangle.
@@ -753,8 +753,14 @@ function getRandomInteger(/* min, max */) {
 //   throw new Error('Not implemented');
 // }
 
+// Тут опять эти приколы с Number.MAX_VALUE и Integer
+
+// function getHypotenuse(a, b) {
+//   return Math.sqrt(a * a + b * b);
+// }
+
 function getHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+  return Math.hypot(a, b);
 }
 
 // N37
