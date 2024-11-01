@@ -58,11 +58,8 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 
-// Придумал как решить :)
-
 function getAverage(value1, value2) {
   const average = value1 / 2 + value2 / 2;
-  console.log('average', average);
   return average;
 }
 
@@ -107,7 +104,7 @@ function getLinearEquationRoot(a, b) {
   return root;
 }
 
-// N6+++ W1 ИСПРАВИЛ И СДЕЛАЛ ЗАДАЧУ
+// N6+++ ///2  W1 ИСПРАВИЛ И СДЕЛАЛ ЗАДАЧУ
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -218,7 +215,7 @@ function getParallelepipedDiagonal(a, b, c) {
   return parallelepipedDiagonal;
 }
 
-// N10--- Q3 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N10+++
 
 /**
  * Returns the number rounded to specified power of 10.
@@ -249,7 +246,7 @@ function roundToPowerOfTen(num, pow) {
 //   throw new Error('Not implemented');
 // }
 
-// N11--- Q4 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N11+++ W2 НАШЁЛ РЕАЛИЗАЦИЮ АЛГОРИТМА РЕШЕТА ЭРАСТОФЕНА НА JS
 
 /**
  * Returns true is the number is prime; otherwise false.
@@ -268,24 +265,26 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-// function isPrime(n) {
-//   let returnIsPrime;
-//   if (n === 2 || n === 3  n % 1 === 0 && n % 2 === 0 && n % 3 === 0 && n % n === 0) {
-//     returnIsPrime = true;
-//   } else {
-//     returnIsPrime = false;
-//   }
 
-//   return returnIsPrime;
-// }
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  const isPrimeArray = Array(n + 1).fill(true);
+  isPrimeArray[0] = false;
+  isPrimeArray[1] = false;
 
-// Найди алгоритмы поиска простых чисел!
-
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
+  for (let i = 2; i * i <= n; i += 1) {
+    if (isPrimeArray[i]) {
+      for (let j = i * i; j <= n; j += i) {
+        isPrimeArray[j] = false;
+      }
+    }
+  }
+  return isPrimeArray[n];
 }
 
-// N12---
+// N12+++ ///2
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -302,8 +301,12 @@ function isPrime(/* n */) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  const convertedNumber = Number(value);
+  if (Number.isNaN(convertedNumber)) {
+    return def;
+  }
+  return convertedNumber;
 }
 
 // N13+++
@@ -327,7 +330,7 @@ function getCube(num) {
   return num ** 3;
 }
 
-// N14---
+// N14+++ ///2
 
 /**
  * Returns the Fibonacci number located at the index position.
@@ -342,8 +345,18 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(index) {
+  if (index === 0) {
+    return 0;
+  }
+  let numberA = 1;
+  let numberB = 1;
+  for (let i = 3; i <= index; i += 1) {
+    const NubmerC = numberA + numberB;
+    numberA = numberB;
+    numberB = NubmerC;
+  }
+  return numberB;
 }
 
 // N15
