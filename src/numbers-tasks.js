@@ -644,7 +644,7 @@ function isSafeInteger(number) {
   return Number.isSafeInteger(number);
 }
 
-// N29--- ///2
+// N29+++ ///2
 
 /**
  * Returns the smallest integer less than or equal to a given number.
@@ -660,11 +660,11 @@ function isSafeInteger(number) {
 //   throw new Error('Not implemented');
 // }
 
-// function roundToSmallestInteger(/* number */) {
-//   throw new Error('Not implemented');
-// }
+function roundToSmallestInteger(number) {
+  return Math.floor(number);
+}
 
-// N30
+// N30--- ///2
 
 /**
  * Returns the largest integer greater than or equal to a given number.
