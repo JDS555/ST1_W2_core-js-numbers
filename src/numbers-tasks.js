@@ -707,7 +707,7 @@ function roundToNearestInteger(number) {
   return Math.round(number);
 }
 
-// N32
+// N32+++ ///2
 
 /**
  * Returns the integer part of a number by removing any fractional digits.
@@ -720,11 +720,16 @@ function roundToNearestInteger(number) {
  * 5.4  => 5
  * -5.5 => -5
  */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+
+// function getIntegerPartNumber(/* number */) {
+//   throw new Error('Not implemented');
+// }
+
+function getIntegerPartNumber(number) {
+  return Math.trunc(number);
 }
 
-// N33
+// N33--- ///2
 
 /**
  * Returns the sum of numbers.
@@ -742,7 +747,7 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
 
-// N34
+// N34+++ ///2
 
 /**
  * Returns the largest number.
@@ -756,8 +761,13 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * -5, -6 => -5
  * 0, 5   => 5
  */
-function getMaxNumber(/* firstNumber, secondNumber */) {
-  throw new Error('Not implemented');
+
+// function getMaxNumber(/* firstNumber, secondNumber */) {
+//   throw new Error('Not implemented');
+// }
+
+function getMaxNumber(firstNumber, secondNumber) {
+  return Math.max(firstNumber, secondNumber);
 }
 
 // N35
