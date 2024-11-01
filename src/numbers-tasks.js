@@ -536,7 +536,7 @@ function getNumberValue(number) {
   return number.valueOf();
 }
 
-// N24--- Q5
+// N24+++ ///2
 
 /**
  * Returns a boolean value indicating whether the parameter is a number or not.
@@ -553,19 +553,16 @@ function getNumberValue(number) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
-}
+
+// Ругаеться на неоптимальность решения
 
 // function isNumber(value) {
-//   let isNumberValue;
-//   if (typeof value === 'number' && !Number.isNaN(value) && !Number.isFinite(value)) {
-//     isNumberValue = true;
-//   } else {
-//     isNumberValue = false;
-//   }
-//   return isNumberValue;
+//   return !Number.isNaN(value) && typeof value !== 'object';
 // }
+
+function isNumber(value) {
+  return typeof value === 'number' && Number.isFinite(value);
+}
 
 // N25+++
 
@@ -585,7 +582,7 @@ function isInteger(number) {
   return Number.isInteger(number);
 }
 
-// N26
+// N26+++ ///2
 
 /**
  * Returns a floating point number or, if the number cannot be parsed from the argument, returns NaN.
@@ -597,11 +594,18 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+
+// Ругаеться на неоптимальность решения
+
+// function getFloatOnString(str) {
+//   return parseFloat(str);
+// }
+
+function getFloatOnString(str) {
+  return Number.parseFloat(str);
 }
 
-// N27
+// N27---
 
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
