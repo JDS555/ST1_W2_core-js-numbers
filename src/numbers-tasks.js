@@ -21,8 +21,8 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  const rectangle = width * height;
-  return rectangle;
+  const rectangleArea = width * height;
+  return rectangleArea;
 }
 
 // N2+++
@@ -61,7 +61,8 @@ function getCircleCircumference(radius) {
 // Придумал как решить :)
 
 function getAverage(value1, value2) {
-  const average = (value1 / 4 + value2 / 4) * 2;
+  const average = value1 / 2 + value2 / 2;
+  console.log('average', average);
   return average;
 }
 
@@ -106,7 +107,7 @@ function getLinearEquationRoot(a, b) {
   return root;
 }
 
-// N6--- Q1 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
+// N6+++ W1 ИСПРАВИЛ И СДЕЛАЛ ЗАДАЧУ
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -135,17 +136,20 @@ https://www.mathway.com/ru/popular-problems/Trigonometry/304868#:~:text=%D0%A7%D
 
 */
 
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  //   const scalarProductOfVectors = x1 * x2 + y1 * y2;
-  //   const modulePointOne = Math.sqrt(x1 ** 2) + (y1 ** 2);
-  //   const modulePointTwo = Math.sqrt(x2 ** 2) + (y2 ** 2);
-  //   const angleBetweenVectors = scalarProductOfVectors / (modulePointOne * modulePointTwo);
-  //   const angleBetweenVectorsInRadians = angleBetweenVectors * (Math.PI / 180);
-  //   return angleBetweenVectorsInRadians;
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const scalarProductOfVectors = x1 * x2 + y1 * y2;
+  const modulePointOne = Math.sqrt(x1 ** 2 + y1 ** 2);
+  const modulePointTwo = Math.sqrt(x2 ** 2 + y2 ** 2);
+  if (modulePointOne === 0 || modulePointTwo === 0) {
+    return 0;
+  }
+  const angleBetweenVectors = Math.acos(
+    scalarProductOfVectors / (modulePointOne * modulePointTwo)
+  );
+  return angleBetweenVectors;
 }
 
-// N7+++ Q2
+// N7+++
 
 /**
  * Returns a last digit of a integer number.
@@ -161,20 +165,20 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     0     => 0
  */
 
-function getLastDigit(value) {
-  const valueToString = String(value);
-  const lastDigit = Math.abs(valueToString.slice(-1));
-  return lastDigit;
-}
+// function getLastDigit(value) {
+//   const valueToString = String(value);
+//   const lastDigit = Math.abs(valueToString.slice(-1));
+//   return lastDigit;
+// }
 
 // При решении выше работает но ругаеться на неоптимальность решения
 // И требует другой метод использовать
 // Это решение он тоже не принимает как оптимальное
 
-// function getLastDigit(value) {
-//   const lastDigit = Math.abs(value) % 10;
-//   return lastDigit;
-// }
+function getLastDigit(value) {
+  const lastDigit = Math.abs(value) % 10;
+  return lastDigit;
+}
 
 // N8+++
 
@@ -236,14 +240,14 @@ function getParallelepipedDiagonal(a, b, c) {
 
 // Пока что не получаеться скипну эту задачу
 
-// function roundToPowerOfTen(num, pow) {
-//   const roundToPowerOf = Math.round(num / (10 ** pow)) * (10 ** pow);
-//   return roundToPowerOf;
-// }
-
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  const roundToPowerOf = Math.round(num / 10 ** pow) * 10 ** pow;
+  return roundToPowerOf;
 }
+
+// function roundToPowerOfTen(/* num, pow */) {
+//   throw new Error('Not implemented');
+// }
 
 // N11--- Q4 ПОКА ПРОПУЩУ ЭТУ ЗАДАЧУ
 
@@ -274,6 +278,8 @@ function roundToPowerOfTen(/* num, pow */) {
 
 //   return returnIsPrime;
 // }
+
+// Найди алгоритмы поиска простых чисел!
 
 function isPrime(/* n */) {
   throw new Error('Not implemented');
