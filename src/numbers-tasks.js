@@ -359,7 +359,7 @@ function getFibonacciNumber(index) {
   return numberB;
 }
 
-// N15
+// N15+++ ///2
 
 /**
  * Returns the sum of all numbers from 1 to n.
@@ -372,11 +372,15 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  let numbersSum = 0;
+  for (let i = 1; i <= n; i += 1) {
+    numbersSum += i;
+  }
+  return numbersSum;
 }
 
-// N16---
+// N16+++ ///2
 
 /**
  * Returns the sum of the digits of a given number.
@@ -389,11 +393,12 @@ function getSumToN(/* n */) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const digitsArray = String(Math.abs(num)).split('');
+  return digitsArray.reduce((sum, digit) => sum + Number(digit), 0);
 }
 
-// N17---
+// N17+++ ///2
 
 /**
  * Returns true if the given number is a power of two, false otherwise.
@@ -406,8 +411,9 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num <= 0) return false;
+  return Math.log2(num) % 1 === 0;
 }
 
 // N18+++
@@ -492,7 +498,7 @@ function toFixed(number, fractionDigits) {
   return number.toFixed(fractionDigits);
 }
 
-// N22---
+// N22+++ ///2
 
 /**
  * Returns a string representation of a number in normal (fixed-point or exponential)
@@ -506,8 +512,8 @@ function toFixed(number, fractionDigits) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  return number.toPrecision(precision);
 }
 
 // N23+++
