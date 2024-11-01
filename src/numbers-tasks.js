@@ -595,17 +595,11 @@ function isInteger(number) {
  * 'abcdefgh'      => NaN
  */
 
-// Ругаеться на неоптимальность решения
-
-// function getFloatOnString(str) {
-//   return parseFloat(str);
-// }
-
 function getFloatOnString(str) {
   return Number.parseFloat(str);
 }
 
-// N27---
+// N27+++ ///2
 
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
@@ -625,11 +619,11 @@ function getFloatOnString(str) {
 //   throw new Error('Not implemented');
 // }
 
-function getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
+function getIntegerOnString(str, base) {
+  return Number.parseInt(str, base);
 }
 
-// N28
+// N28+++ ///2
 
 /**
  * Returns whether a number is a safe integer.
@@ -642,11 +636,15 @@ function getIntegerOnString(/* str, base */) {
  * 3.5      => false
  * 2 ** 53  => false
  */
-function isSafeInteger(/* number */) {
-  throw new Error('Not implemented');
+// function isSafeInteger(/* number */) {
+//   throw new Error('Not implemented');
+// }
+
+function isSafeInteger(number) {
+  return Number.isSafeInteger(number);
 }
 
-// N29
+// N29--- ///2
 
 /**
  * Returns the smallest integer less than or equal to a given number.
@@ -658,9 +656,13 @@ function isSafeInteger(/* number */) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
-}
+// function roundToSmallestInteger(/* number */) {
+//   throw new Error('Not implemented');
+// }
+
+// function roundToSmallestInteger(/* number */) {
+//   throw new Error('Not implemented');
+// }
 
 // N30
 
